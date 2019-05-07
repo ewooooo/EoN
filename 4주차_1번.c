@@ -9,8 +9,29 @@ struct data { // linked list
 	int test;
 	struct data *next;
 };
+void RemoveSp(struct data **start) {
+	struct data *del = *start;	//공간을 지우기 위해 선언
+	*start = (*start)->next;		//시작지점 이동
+	free(del);					//지우기
+}
 
+void MoveLast(struct data **start, struct data **end) {
+	(*end)->next = *start;			//끝지점과 시작지점 연결
+	*start = (*start)->next;		//시작지점 2째로 이동
+	*end = (*end)->next;			//끝지점 이동
+	(*end)->next = NULL;			//원래 시작지점과 둘째지점 끊기
+}
 
+int TestDaTa(struct data *testdata) {
+	int test = 0;
+	int testValue = testdata->value;
+	while (testdata != NULL) {
+		if (testValue < testdata->value)
+			return 1;
+		testdata = testdata->next;
+	}
+	return 0;
+}
 void main(void) {
 
 	int allCount, setNum, timeValue = 0;
@@ -44,20 +65,8 @@ void main(void) {
 
 
 	while (1) {
-		struct data *testdata = start;
-		int test = 0;
-		int testValue = testdata->value;
-		while (testdata != NULL) {
-			if (testValue < testdata->value)
-				test = 1;
-			testdata = testdata->next;
-		}
-
-		if (test == 1) {				//뒤에 높은 우선순위가 있을시
-			end->next = start;			//끝지점과 시작지점 연결
-			start = start->next;		//시작지점 2째로 이동
-			end = end->next;			//끝지점 이동
-			end->next = NULL;			//원래 시작지점과 둘째지점 끊기
+		if (TestDaTa(start) == 1) {				//뒤에 높은 우선순위가 있을시
+			MoveLast(&start, &end);		//뒤로 보내기
 		}
 		else {							//프린트 출력시
 			timeValue++;				//한번 프린트 될때마다 시간변수 ++
@@ -65,12 +74,11 @@ void main(void) {
 				break;
 			}
 			else {
-				struct data *del = start;	//공간을 지우기 위해 선언
-				start = start->next;		//시작지점 이동
-				free(del);					//지우기
+				RemoveSp(&start);		//출력으로 인정 지우기
 			}
 		}
 	}
 	printf("\n출력 \n");
 	printf("%d\n", timeValue);
 }
+
