@@ -1,5 +1,6 @@
-//2번 문제
 #include <stdio.h>
+
+//https://cafe.naver.com/kyonggieon/823 2번 문제
 
 void inRect(int *x, int *y, int *tx1, int *ty1, int *tx2, int *ty2, int *t);
 

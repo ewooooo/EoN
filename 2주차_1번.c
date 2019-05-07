@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//https://cafe.naver.com/kyonggieon/812 1¹ø¹®Á¦
 void main(void) {
 
 	int ivalue;

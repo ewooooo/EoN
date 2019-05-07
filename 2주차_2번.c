@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//https://cafe.naver.com/kyonggieon/812 2번문제
+
 void main(void) {
 
 	printf("========== 메뉴 =========\n");

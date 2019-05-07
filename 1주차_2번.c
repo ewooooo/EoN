@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//2번문제
+//http://euler.synap.co.kr/prob_list.php 2번문제
 
 void main(void) {
 

@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+//https://cafe.naver.com/kyonggieon/829 2¹ø¹®Á¦
+
 struct Stack
 {
 	int data[10];

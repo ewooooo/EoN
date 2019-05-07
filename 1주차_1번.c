@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//1번 문제
+//http://euler.synap.co.kr/prob_list.php 1번 문제
 void main(void) {
 
 	int iSum = 0, iCount;

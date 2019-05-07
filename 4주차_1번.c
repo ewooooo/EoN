@@ -3,6 +3,7 @@
 
 
 //프린터 문제 http://59.23.150.58/30stair/print/print.php?pname=print
+//https://cafe.naver.com/kyonggieon/829 1번문제
 
 struct data { // linked list
 	int value;

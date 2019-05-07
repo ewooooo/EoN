@@ -1,6 +1,7 @@
-//1번 문제
-
 #include <stdio.h>
+
+//https://cafe.naver.com/kyonggieon/823 1번 문제
+
 
 int inRect(int x, int y, int tx1, int ty1, int tx2, int ty2);
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//4번 문제
+//http://euler.synap.co.kr/prob_list.php 4번 문제
 
 void main(void) {
 
