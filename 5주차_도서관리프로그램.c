@@ -88,8 +88,6 @@ void FileOut(struct DataList *printNode) {
 	printf("File Save OK\n");
 }
 
-
-
 void PrintBook(struct DataList *dataStart);
 
 char* In_String() {		//문자열 입력에 맞게 공간조정
@@ -154,7 +152,6 @@ struct DataList* SearchNode(struct DataList *testNode, char *sTest) {
 		return NULL;
 	}
 }
-
 
 void SearchBook(struct DataList *loopLinkd) {
 
@@ -256,11 +253,7 @@ void EditBook(struct DataList *dataStart) {
 struct DataList* DeleteBook(struct DataList *dataStart) {
 	PrintBook(dataStart);
 
-
-
 	struct DataList* testNode = dataStart;
-
-
 
 	while (1) {
 		printf("\n삭제랑 도서명을 정확히 입력하세요:");
@@ -280,7 +273,6 @@ struct DataList* DeleteBook(struct DataList *dataStart) {
 		else {
 			break;
 		}
-
 	}
 	struct DataList* loopNode = dataStart;
 	if (testNode == dataStart) {
@@ -312,7 +304,6 @@ void PrintBook(struct DataList *dataStart) {
 		loopLinkd = loopLinkd->nextList;
 	}
 	printf("-----------------------------------\n");
-
 }
 void menu(struct DataList *dataStart) {
 
